@@ -1,0 +1,145 @@
+.ranked-candidates-page {
+  padding: 40px;
+  max-width: 1200px;
+  margin: 0 auto;
+  font-family: Arial, sans-serif;
+  color: #fff;
+}
+
+.section-title-wrapper {
+  text-align: center;
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 30px;
+}
+
+.candidates-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); 
+  gap: 20px; 
+  padding: 20px; 
+}
+
+.candidate-card-wrapper {
+  position: relative;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+.candidate-card-wrapper:hover {
+  transform: scale(1.03);
+}
+
+.ranking-badge {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background-color: rgba(0, 229, 255, 0.8);
+  color: #fff;
+  padding: 6px 10px;
+  border-radius: 20px;
+  font-weight: bold;
+  font-size: 14px;
+}
+
+.skills-line {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 10px;
+  gap: 6px;
+}
+
+.skill-tag {
+  background-color: #dbeafe;
+  color: #1e3a8a;
+  padding: 4px 8px;
+  border-radius: 12px;
+  font-size: 13px;
+  font-weight: bold;
+}
+
+.filter-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 16px;
+  font-size: 16px;
+  color: white;
+}
+
+.filter-container select {
+  background-color: #1e1e1e; 
+  color: #ffffff; 
+  border: 1px solid #888;
+  padding: 6px 10px;
+  border-radius: 6px;
+  font-size: 14px;
+}
+
+.filter-container select option {
+  background-color: #1e1e1e; 
+  color: #ffffff;
+}
+
+.search-bar-container {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0; /* no gap between inputs */
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 999px;
+  overflow: hidden;
+  padding: 8px 16px;
+  margin: 20px auto;
+  max-width: 95%;
+  box-shadow: 0 0 10px rgba(0, 229, 255, 0.3);
+  backdrop-filter: blur(10px);
+  height: 100px;
+}
+
+.search-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 12px;
+  color: rgba(255, 255, 255, 0.8);
+  font-size: 18px;
+}
+
+.search-input-section {
+  flex: 1 1 0;
+  min-width: 0;
+  border: none;
+  background: transparent;
+  color: white;
+  padding: 12px 16px;
+  font-size: 14px;
+  text-overflow: ellipsis;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  box-sizing: border-box; 
+  height: 100%; 
+  display: flex; 
+  align-items: center; 
+}
+
+.search-input-section::placeholder {
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.search-input-section:focus {
+  outline: none;
+  background: rgba(255, 255, 255, 0.05);
+}
+
+.search-input-section option {
+  background-color: rgba(0, 0, 0, 0.9);
+  color: white;
+}
+
+.search-input-section::-ms-expand {
+  display: none; 
+}

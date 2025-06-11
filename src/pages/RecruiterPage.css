@@ -1,0 +1,91 @@
+.recruiter-page {
+  padding: 40px;
+  max-width: 1200px;
+  margin: 0 auto;
+  font-family: Arial, sans-serif;
+  color: #fff;
+}
+
+.section-title {
+  text-align: center;
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.job-postings-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  margin-bottom: 80px; /* to avoid dock overlap */
+}
+
+.job-posting-card {
+  cursor: pointer;
+}
+
+.experience-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.experience-actions {
+  display: flex;
+  gap: 10px;
+}
+
+.experience-icon {
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+.experience-icon:hover {
+  transform: scale(1.2);
+}
+
+.job-meta {
+  display: flex;
+  justify-content: space-between;
+  margin: 10px 0;
+  font-weight: bold;
+}
+
+.job-description {
+  margin: 10px 0;
+}
+
+.skills-line {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin: 10px 0;
+}
+
+.skill-tag {
+  background-color: #dbeafe;
+  color: #1e3a8a;
+  padding: 6px 12px;
+  border-radius: 20px;
+  font-weight: bold;
+}
+
+.job-extra {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  margin-top: 10px;
+}
+
+.add-job-card {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 150px;
+  cursor: pointer;
+}
+
+.add-plus {
+  font-size: 48px;
+  color: #00e5ff;
+}
