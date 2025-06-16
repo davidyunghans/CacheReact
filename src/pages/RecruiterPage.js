@@ -37,10 +37,10 @@ const RecruiterPage = () => {
   const dockItems = [
     { icon: <FaBriefcase size={20} />, label: 'JobBoard', onClick: () => navigate('/recruiter') }, 
     { icon: <FaSearch size={20} />, label: 'Search', onClick: () => navigate('/search') },        
-    { icon: <FaComments size={20} />, label: 'Interviews', onClick: () => alert('Interviews') },
+    { icon: <FaComments size={20} />, label: 'Interviews', onClick: () => navigate('/recruiter/interviews') },
     { icon: <FaUserFriends size={20} />, label: 'Candidates', onClick: () => alert('Candidates') },
-    { icon: <FaCog size={20} />, label: 'Settings', onClick: () => alert('Settings') },
-    { icon: <FaUser size={20} />, label: 'Account', onClick: () => alert('Account') },
+    { icon: <FaCog size={20} />, label: 'Settings', onClick: () => navigate('/recruiter/settings') },
+    { icon: <FaUser size={20} />, label: 'Account', onClick: () => navigate('/recruiter/account') },
   ];
 
   return (

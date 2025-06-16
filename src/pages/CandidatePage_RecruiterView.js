@@ -117,13 +117,13 @@ const CandidatePage_RecruiterView = () => {
   const { id } = useParams();
     console.log("Viewing candidate id:", id);
   const dockItems = [
-    { icon: <FaBriefcase size={20} />, label: 'JobBoard', onClick: () => navigate('/recruiter') },
-    { icon: <FaSearch size={20} />, label: 'Search', onClick: () => alert('Search') },
-    { icon: <FaComments size={20} />, label: 'Interviews', onClick: () => alert('Interviews') },
-    { icon: <FaUserFriends size={20} />, label: 'Candidates', onClick: () => alert('Candidates') },
-    { icon: <FaCog size={20} />, label: 'Settings', onClick: () => alert('Settings') },
-    { icon: <FaUser size={20} />, label: 'Account', onClick: () => alert('Account') },
-  ];
+        { icon: <FaBriefcase size={20} />, label: 'JobBoard', onClick: () => navigate('/recruiter') }, 
+        { icon: <FaSearch size={20} />, label: 'Search', onClick: () => navigate('/search') },        
+        { icon: <FaComments size={20} />, label: 'Interviews', onClick: () => navigate('/recruiter/interviews') },
+        { icon: <FaUserFriends size={20} />, label: 'Candidates', onClick: () => alert('Candidates') },
+        { icon: <FaCog size={20} />, label: 'Settings', onClick: () => navigate('/recruiter/settings') },
+        { icon: <FaUser size={20} />, label: 'Account', onClick: () => navigate('/recruiter/account') },
+      ];
 
   return (
     <main className="candidate-page">
@@ -148,7 +148,6 @@ const CandidatePage_RecruiterView = () => {
         <FaArrowLeft style={{ marginRight: '8px' }} />
         Back
       </div>
-      <FadeInOnScroll>
         <div className="top-section">
           <div className="info-section">
             <div className="candidate-picture">
@@ -160,7 +159,13 @@ const CandidatePage_RecruiterView = () => {
             </div>
 
             <div className="candidate-details">
-              <h2>{candidateInfo.name}</h2>
+              <div className="candidate-header">
+                <h2>{candidateInfo.name}</h2>
+                <button className="schedule-interview-button">
+                  <FaPlus style={{ marginRight: '6px' }} />
+                  Schedule Interview
+                </button>
+              </div>
               <div className="degree">{candidateInfo.degree}</div>
               <div className="college">{candidateInfo.college}</div>
               <div className="location">{candidateInfo.location}</div>
@@ -199,9 +204,7 @@ const CandidatePage_RecruiterView = () => {
             </div>
           </div>
         </div>
-      </FadeInOnScroll>
 
-      <FadeInOnScroll>
         <div className="experiences-section">
           <h2 className="section-title">Experiences</h2>
           <div className="experiences-grid">
@@ -226,9 +229,7 @@ const CandidatePage_RecruiterView = () => {
             ))}
           </div>
         </div>
-      </FadeInOnScroll>
 
-      <FadeInOnScroll>
         <div className="projects-section">
           <h2 className="section-title">Projects</h2>
           <div className="projects-grid">
@@ -253,7 +254,6 @@ const CandidatePage_RecruiterView = () => {
             ))}
           </div>
         </div>
-      </FadeInOnScroll>
 
       <Dock
         items={dockItems}

@@ -2,10 +2,14 @@ import React, { useState, useRef } from 'react';
 import './FileUploadPage.css';
 import MetaBalls from '../components/MetaBalls'; 
 import BlurText from "../components/BlurText";
+import { FaUser, FaFileUpload, FaComments, FaPuzzlePiece, FaCog } from 'react-icons/fa';
+import { useNavigate } from 'react-router-dom';
+import Dock from '../components/Dock';
 
 const FileUploadPage = () => {
   const [selectedFile, setSelectedFile] = useState(null);
   const dropRef = useRef();
+  const navigate = useNavigate();
 
   const handleFileChange = (e) => {
     const file = e.target.files[0];
@@ -77,6 +81,19 @@ const FileUploadPage = () => {
           <strong>{selectedFile.name}</strong>
         </div>
       )}
+
+      <Dock
+        items = {[
+              { icon: <FaUser size={20} />, label: 'Account', onClick: () => navigate('/candidate') }, 
+              { icon: <FaFileUpload size={20} />, label: 'File Upload', onClick: () => navigate('/upload') },
+              { icon: <FaComments size={20} />, label: 'Interviews', onClick: () => navigate('/candidate/interviews') },
+              { icon: <FaPuzzlePiece size={20} />, label: 'Manage Extensions', onClick: () => alert('Manage Extensions') },
+              { icon: <FaCog size={20} />, label: 'Settings', onClick: () => navigate('/candidate/settings') },
+            ]}
+        panelHeight={68}
+        baseItemSize={50}
+        magnification={70}
+      /> 
     </main>
   );
 };

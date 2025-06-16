@@ -12,6 +12,10 @@ import FileUploadPage from './pages/FileUploadPage';
 import RankedCandidates_Posting from './pages/RankedCandidates_Posting';
 import CandidatePage_RecruiterView from './pages/CandidatePage_RecruiterView';
 import CandidateSearch from './pages/CandidateSearch';
+import CandidateSettings from './pages/CandidateSettings'; 
+import CandidateInterview from './pages/CandidateInterview';
+import RecruiterSettings from './pages/RecruiterSettings';
+import RecruiterInterview from './pages/RecruiterInterview';
 
 export const AppRoutes = () => {
   return (
@@ -28,6 +32,10 @@ export const AppRoutes = () => {
         <Route path="/candidate-ranking" element={<RankedCandidates_Posting />} />
         <Route path="/candidate/:id" element={<CandidatePage_RecruiterView />} />
         <Route path="/search" element={<CandidateSearch />} />
+        <Route path="/candidate/settings" element={<CandidateSettings />} />
+        <Route path="/candidate/interviews" element={<CandidateInterview />} />
+        <Route path="/recruiter/settings" element={<RecruiterSettings />} />
+        <Route path="/recruiter/interviews" element={<RecruiterInterview />} />
       </Routes>
       <Footer />
     </Router>

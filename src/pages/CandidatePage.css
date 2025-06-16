@@ -250,3 +250,28 @@
 .projects-section {
   margin-top: 40px;
 }
+
+.candidate-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.schedule-interview-button {
+  display: flex;
+  align-items: center;
+  background: linear-gradient(135deg, #00e5ff, #007bff);
+  color: white;
+  border: none;
+  padding: 8px 14px;
+  border-radius: 6px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.schedule-interview-button:hover {
+  background: linear-gradient(135deg, #00b8d4, #0056b3);
+}

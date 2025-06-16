@@ -126,14 +126,13 @@ const CandidatePage = () => {
     const dockItems = [
       { icon: <FaUser size={20} />, label: 'Account', onClick: () => navigate('/candidate') }, 
       { icon: <FaFileUpload size={20} />, label: 'File Upload', onClick: () => navigate('/upload') },
-      { icon: <FaComments size={20} />, label: 'Interviews', onClick: () => alert('Interviews') },
-      { icon: <FaPuzzlePiece size={20} />, label: 'Manage Extensions', onClick: () => alert('Manage Extensions') },
-      { icon: <FaCog size={20} />, label: 'Settings', onClick: () => alert('Settings') },
+      { icon: <FaComments size={20} />, label: 'Interviews', onClick: () => navigate('/candidate/interviews') },
+      { icon: <FaPuzzlePiece size={20} />, label: 'Manage Extensions', onClick: () => alert('/manage_extensions') },
+      { icon: <FaCog size={20} />, label: 'Settings', onClick: () => navigate('/candidate/settings') },
     ];
 
   return (
     <main className="candidate-page">
-        <FadeInOnScroll>
       <div className="top-section">
 
         {/* Subsection: Info */}
@@ -225,10 +224,8 @@ const CandidatePage = () => {
         </div>
 
       </div>
-      </FadeInOnScroll>
 
       {/* Experiences Section */}
-      <FadeInOnScroll>
     <div className="experiences-section">
         <h2 className="section-title">Experiences</h2>
         <div className="experiences-grid">
@@ -265,10 +262,8 @@ const CandidatePage = () => {
             </SpotlightCard>
         </div>
        </div>
-       </FadeInOnScroll>
 
             {/* Projects Section */}
-            <FadeInOnScroll>
        <div className="projects-section">
         <h2 className="section-title">Projects</h2>
         <div className="projects-grid">
@@ -305,7 +300,6 @@ const CandidatePage = () => {
             </SpotlightCard>
         </div>
         </div>
-        </FadeInOnScroll>
 
         <Dock
             items={dockItems}
