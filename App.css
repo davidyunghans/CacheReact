@@ -1,0 +1,50 @@
+.App {
+  text-align: center;
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+.App-logo {
+  width: 200px;
+  height: 200px;
+  fill: url(#animated-gradient); /* apply gradient to SVG fill */
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-logo {
+  animation: none !important;
+  transform: none !important;
+}
+
+
+
+/* Define the animation for the gradient */
+@keyframes gradientShift {
+  0% {
+    x1: 0%;
+    x2: 100%;
+  }
+  100% {
+    x1: 100%;
+    x2: 200%;
+  }
+}
+
