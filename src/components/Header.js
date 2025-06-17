@@ -1,5 +1,5 @@
 import React from "react";
-
+import { Link } from "react-router-dom";
 class Header extends React.Component {
   render() {
     return (
@@ -14,7 +14,7 @@ class Header extends React.Component {
           </ul>
         </nav>
   
-        <a href="isignup.html" className="btn-signing">Create an Account</a>
+      <Link to="/signup" className="btn-get-started">Create An Account</Link>
       </header>
     );
   }

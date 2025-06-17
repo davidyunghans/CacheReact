@@ -30,10 +30,10 @@ class Home extends React.Component {
                 APPLY WITHOUT APPLYING <br /> RECRUIT WITHOUT RECRUITING
               </p>
 
-              <div className="buttons">
-                <a href="ilogin.html" className="btn-get-started">Login</a>
-                <a href="searchcandidate.html" className="btn-signing-main">Search Candidates</a>
-              </div>
+            <div className="buttons">
+              <Link to="/ilogin" className="btn-get-started">Login</Link>
+              <Link to="/search" className="btn-signing-main">Search Candidates</Link>
+            </div>
             </div>
           </div>
 
